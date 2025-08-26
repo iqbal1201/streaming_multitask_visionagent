@@ -50,10 +50,10 @@ Create a .env file inside the app/ folder with the following content:
 ```bash
 # Create .env file
 GOOGLE_GENAI_USE_VERTEXAI="TRUE"
-GOOGLE_CLOUD_PROJECT="aisee-ahlab"
+GOOGLE_CLOUD_PROJECT="xxxxxx"
 GOOGLE_CLOUD_LOCATION="us-central1"
 GOOGLE_API_KEY=xxxxxxxxxxxxxx
-RAG_CORPUS='projects/aisee-ahlab/locations/us-central1/ragCorpora/2305843009213693952'
+RAG_CORPUS='projects/xxxxxxxxx/locations/us-central1/ragCorpora/2305843009213693952'
 ```
 
 
@@ -100,7 +100,7 @@ This agent will use Vertex AI service so that we need to make sure GOOGLE_GENAI_
 
 ```bash
 GOOGLE_GENAI_USE_VERTEXAI="TRUE"
-GOOGLE_CLOUD_PROJECT="aisee-ahlab"
+GOOGLE_CLOUD_PROJECT="xxxxxxx"
 GOOGLE_CLOUD_LOCATION="us-central1"
 
 ```
@@ -115,7 +115,7 @@ cd aisee-adk/app
 ## 3. Push Image to Artifact Registry
 
 ```bash
-gcloud builds submit --tag us-central1-docker.pkg.dev/aisee-ahlab/aisee-tridorian/vision-agent .
+gcloud builds submit --tag us-central1-docker.pkg.dev/xxxxxx/aisee-tridorian/vision-agent .
 
 ```
 
@@ -124,7 +124,7 @@ gcloud builds submit --tag us-central1-docker.pkg.dev/aisee-ahlab/aisee-tridoria
 
 ```bash
 gcloud run deploy vision-agent \
-  --image us-central1-docker.pkg.dev/aisee-ahlab/aisee-tridorian/vision-agent \
+  --image us-central1-docker.pkg.dev/xxxxxxx/aisee-tridorian/vision-agent \
   --platform managed \
   --region asia-southeast1 \
   --allow-unauthenticated 
